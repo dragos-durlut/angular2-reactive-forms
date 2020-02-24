@@ -1,5 +1,5 @@
 <p>field-switcher works!</p>
-<ng-container [formGroup]="fieldUI.ParentSectionFormGroup">
+<ng-container [formGroup]="fieldUI.parentSectionFormGroup">
   <ng-container [ngSwitch]="fieldUI.formField.formFieldType">
     <app-field-checkbox *ngSwitchCase="formFieldTypeEnum.CheckBox" [fieldUI]="fieldUI"> </app-field-checkbox>
     <app-field-date-picker *ngSwitchCase="formFieldTypeEnum.DateTime" [fieldUI]="fieldUI"> </app-field-date-picker>
