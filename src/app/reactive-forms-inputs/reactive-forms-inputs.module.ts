@@ -8,7 +8,6 @@ import { FieldDatePickerComponent } from './field-date-picker/field-date-picker.
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FieldCheckboxComponent } from './field-checkbox/field-checkbox.component';
 import { FieldSwitcherComponent } from './field-switcher/field-switcher.component';
-import { FormFieldUI } from './classes/form-field-ui';
 import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
 
 
@@ -28,8 +27,7 @@ import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
     , FieldDatePickerComponent
     , FieldInputComponent
     , FieldTextareaComponent
-    , FieldSwitcherComponent
-    , FormFieldUI
+    , FieldSwitcherComponent    
     , FormFieldUiBuilder
   ]
 })

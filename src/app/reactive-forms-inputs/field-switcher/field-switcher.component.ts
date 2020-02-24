@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormFieldTypeEnum } from '../../shared/enums/form-field-type.enum';
-import { FormFieldUI } from '../classes/form-field-ui';
 import { BaseInputComponent } from '../classes/base-input.component';
 
 @Component({

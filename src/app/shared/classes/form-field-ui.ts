@@ -1,6 +1,7 @@
 import { FormField } from '../../shared/interfaces/form-field';
 import { FormControl, FormGroup } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
+import { FormSectionUI } from './form-section-ui';
 export class FormFieldUI {
   public formField: FormField;
   public fieldDisplayId: string;
@@ -8,6 +9,7 @@ export class FormFieldUI {
   public fieldFormControl: FormControl;
   public parentSectionFormGroup: FormGroup;
   public mainFormGroup: FormGroup;
+  public parentFormSectionUI: FormSectionUI;
 
   public valueChange: EventEmitter<any> = new EventEmitter<any>();
 

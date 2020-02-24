@@ -1,5 +1,6 @@
-import { FormSectionUI } from '../classes/form-section-ui';
+
 import { FormGroup } from '@angular/forms';
+import { FormSectionUI } from '../../shared/classes/form-section-ui';
 
 export class FormGroupBuilder {
   static buildFormSectionFormGroup(formSectionUI: FormSectionUI): FormGroup {

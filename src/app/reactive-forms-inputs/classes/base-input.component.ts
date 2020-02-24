@@ -1,6 +1,6 @@
 import { OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { FormFieldUI } from './form-field-ui';
 import { FormFieldTypeEnum } from '../../shared/enums/form-field-type.enum';
+import { FormFieldUI } from '../../shared/classes/form-field-ui';
 
 export class BaseInputComponent implements OnInit {
 

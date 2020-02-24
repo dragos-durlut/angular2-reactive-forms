@@ -1,8 +1,9 @@
 import { FormSchema } from '../../shared/interfaces/form-schema';
-import { FormSchemaUI } from '../classes/form-schema-ui';
-import { FormSectionUI } from '../classes/form-section-ui';
+
 import { FormSectionUiBuilder } from './form-section-ui-builder';
 import { MainFormGroupBuilder } from './main-form-group-builder';
+import { FormSchemaUI } from '../../shared/classes/form-schema-ui';
+import { FormSectionUI } from '../../shared/classes/form-section-ui';
 
 export class FormSchemaUiBuilder {
   static fromFormSchemaData(formSchema: FormSchema): FormSchemaUI {

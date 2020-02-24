@@ -1,8 +1,9 @@
 import { FormSection } from '../../shared/interfaces/form-section';
-import { FormSectionUI } from '../classes/form-section-ui';
-import { FormFieldUI } from '../../reactive-forms-inputs/classes/form-field-ui';
+
 import { FormGroupBuilder } from './form-group-builder';
 import { FormFieldUiBuilder } from '../../reactive-forms-inputs/builders/form-field-ui-builder';
+import { FormFieldUI } from '../../shared/classes/form-field-ui';
+import { FormSectionUI } from '../../shared/classes/form-section-ui';
 
 export class FormSectionUiBuilder {
   static fromFormSectionData(formSection: FormSection): FormSectionUI {

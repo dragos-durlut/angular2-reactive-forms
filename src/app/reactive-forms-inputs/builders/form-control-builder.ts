@@ -1,6 +1,6 @@
-import { FormFieldUI } from '../classes/form-field-ui';
 import { FormControl, ValidatorFn, AsyncValidatorFn, Validators } from '@angular/forms';
 import { FormFieldTypeEnum } from '../../shared/enums/form-field-type.enum';
+import { FormFieldUI } from '../../shared/classes/form-field-ui';
 
 export class FormControlBuilder {
   static buildFormControl(formFieldUI: FormFieldUI): FormControl {

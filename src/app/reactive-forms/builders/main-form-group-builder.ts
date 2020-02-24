@@ -1,5 +1,6 @@
-import { FormSchemaUI } from '../classes/form-schema-ui';
+
 import { FormGroup } from '@angular/forms';
+import { FormSchemaUI } from '../../shared/classes/form-schema-ui';
 
 export class MainFormGroupBuilder {
   public static buildMainFormGroup(formSchemaUI: FormSchemaUI): FormGroup {
