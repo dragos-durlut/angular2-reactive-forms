@@ -1,4 +1,4 @@
-import { FormFieldType } from '../enums/form-field-type.enum';
+import { FormFieldTypeEnum } from '../enums/form-field-type.enum';
 
 export interface FormField {
   FieldId: number;
@@ -6,7 +6,7 @@ export interface FormField {
   Order: number;
   Value: any;
   DisplayValue: any;
-  FormFieldType: FormFieldType;
+  FormFieldType: FormFieldTypeEnum;
   IsEnabled: boolean;
   IsMandatory: boolean;
   RegExValidator: string;
