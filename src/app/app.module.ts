@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from './reactive-forms/reactive-forms.module';
+
 import { FormFieldUiBuilder } from './reactive-forms-inputs/builders/form-field-ui-builder';
+import { ReactiveFormsSectionsModule } from './reactive-forms-sections/reactive-forms-sections.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { FormFieldUiBuilder } from './reactive-forms-inputs/builders/form-field-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsSectionsModule
   ],
   providers: [FormFieldUiBuilder ],
   bootstrap: [AppComponent]

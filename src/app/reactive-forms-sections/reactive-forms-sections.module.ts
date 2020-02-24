@@ -17,4 +17,4 @@ import { MainFormComponent } from './main-form/main-form.component';
     MainFormComponent, LabelWithFieldTupleComponent
   ]
 })
-export class ReactiveFormsModule { }
+export class ReactiveFormsSectionsModule { }
