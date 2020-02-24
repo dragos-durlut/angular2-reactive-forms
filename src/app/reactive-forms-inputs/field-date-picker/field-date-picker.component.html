@@ -1,0 +1,16 @@
+<p>field-date-picker works!</p>
+
+<ng-container [formGroup]="fieldUI.ParentSectionFormGroup">
+  <input matInput
+         [matDatepicker]="{{fieldUI.FieldDisplayId}}"
+         name="{{fieldUI.FieldDisplayId}}"
+         id="{{fieldUI.FieldDisplayId}}"
+         formControlName="{{fieldUI.FieldDisplayId}}"
+         [(ngModel)]="fieldUI.Value"
+         (blur)="onBlur($event)"
+         (keypress)="$event.keyCode==13 ? onEnter() : true"/>
+  <mat-datepicker-toggle matSuffix [for]="{{fieldUI.FieldDisplayId}}"></mat-datepicker-toggle>
+  <mat-datepicker attrib-id="#{{fieldUI.FieldDisplayId}}"></mat-datepicker>
+</ng-container>
+
+
