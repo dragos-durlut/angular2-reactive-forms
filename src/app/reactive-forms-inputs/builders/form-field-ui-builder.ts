@@ -5,7 +5,7 @@ import { FormControlBuilder } from './form-control-builder';
 export class FormFieldUiBuilder {
   static fromFormFieldData(formField: FormField): FormFieldUI {
     let formFieldUI = new FormFieldUI(formField);
-    formFieldUI.FieldFormControl = FormControlBuilder.buildFormControl(formFieldUI);
+    formFieldUI.fieldFormControl = FormControlBuilder.buildFormControl(formFieldUI);
     return formFieldUI;
   }
 }

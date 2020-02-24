@@ -3,13 +3,13 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
 export class FormFieldUI {
   public formField: FormField;
-  public FieldDisplayId: string;
+  public fieldDisplayId: string;
 
-  public FieldFormControl: FormControl;
-  public ParentSectionFormGroup: FormGroup;
-  public MainFormGroup: FormGroup;
+  public fieldFormControl: FormControl;
+  public parentSectionFormGroup: FormGroup;
+  public mainFormGroup: FormGroup;
 
-  public ValueChange: EventEmitter<any> = new EventEmitter<any>();
+  public valueChange: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(formField: FormField) {
     this.formField = formField;
@@ -21,40 +21,40 @@ export class FormFieldUI {
     return !this.isEnabled;
   }
   private setIsEnabled(isEnabled: boolean, emitEvent: boolean) {
-    this.formField.IsEnabled = isEnabled;
+    this.formField.isEnabled = isEnabled;
     if (isEnabled)
-      this.FieldFormControl.enable({});
-    else this.FieldFormControl.disable({});
+      this.fieldFormControl.enable({});
+    else this.fieldFormControl.disable({});
     //https://stackoverflow.com/questions/43541897/valuechanges-on-formcontrol-triggers-when-form-enable-even-with-emitevent-fals
   }
 
   get isEnabled() {
-    return this.formField.IsEnabled;
+    return this.formField.isEnabled;
   }
 
   get isInvalid() {
-    return this.FieldFormControl.invalid;
+    return this.fieldFormControl.invalid;
   }
 
   get isValid() {
-    return this.FieldFormControl.valid;
+    return this.fieldFormControl.valid;
   }
 
   get isPristine() {
-    return this.FieldFormControl.pristine;
+    return this.fieldFormControl.pristine;
   }
 
   public disableControl(emitEvent: boolean) {
     this.setIsEnabled(false, emitEvent);
     if (emitEvent) {
-      this.ValueChange.emit(false);
+      this.valueChange.emit(false);
     }
   }
 
   public enableControl(emitEvent: boolean) {
     this.setIsEnabled(true, emitEvent);
     if (emitEvent) {
-      this.ValueChange.emit(true);
+      this.valueChange.emit(true);
     }
   }
 
@@ -64,16 +64,16 @@ export class FormFieldUI {
 
   public setValueAndDisplayValue(valueToSet: any, valueToDisplay: any = null, emitEvent: boolean = true, setValueToFormControl: boolean = true) {
     this.setValue(valueToSet, emitEvent, setValueToFormControl);
-    this.formField.DisplayValue = valueToDisplay;
+    this.formField.displayValue = valueToDisplay;
   }
 
   public setValue(valueToSet: any, emitEvent: boolean = true, setValueToFormControl: boolean = true) {
-    this.formField.Value = valueToSet;
+    this.formField.value = valueToSet;
     if (setValueToFormControl) {
-      this.FieldFormControl.setValue(valueToSet, { emitEvent: emitEvent, onlySelf: !emitEvent });
+      this.fieldFormControl.setValue(valueToSet, { emitEvent: emitEvent, onlySelf: !emitEvent });
     }
     if (emitEvent) {
-      this.ValueChange.emit(valueToSet);
+      this.valueChange.emit(valueToSet);
     }
   }
 //#endregion FormControl functions
