@@ -1,1 +1,16 @@
 <p>main-form works!</p>
+<form (ngSubmit)="formSubmitSubject$.next(ciForm)" #ciForm="ngForm">
+  <div class="row">
+    <div class="col-md-2 col-lg-2 col-sm-12">
+      <button mat-button type="submit" [disabled]="submitting"> {{ submitting ? (submittingButtonText||submitButtonText) : submitButtonText }} </button>
+    </div>
+  </div>
+
+  <app-form-section *ngFor="let sectionUI of formSchemaUI.sectionsUI" [sectionUI]="sectionUI" [formGroup]="formSchemaUI.mainFormGroup"></app-form-section>
+
+  <div class="row">
+    <div class="col-md-2 col-lg-2 col-sm-12">
+      <button mat-button type="submit" [disabled]="submitting"> {{ submitting ? (submittingButtonText||submitButtonText) : submitButtonText }} </button>
+    </div>
+  </div>
+</form>
