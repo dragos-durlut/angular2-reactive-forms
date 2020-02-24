@@ -1,7 +1,9 @@
 <p>field-checkbox works!</p>
-<mat-checkbox id="{{fieldUI.FieldDisplayId}}"
-              formControlName="{{fieldUI.FieldDisplayId}}"
-              [(ngModel)]="isChecked"
-              (change)="onValueChange($event)">
-  {{fieldUI.formField.label}}
-</mat-checkbox>
+<ng-container [formGroup]="fieldUI.parentSectionFormGroup">
+  <mat-checkbox id="{{fieldUI.FieldDisplayId}}"
+                formControlName="{{fieldUI.FieldDisplayId}}"
+                [(ngModel)]="isChecked"
+                (change)="onValueChange($event)">
+    {{fieldUI.formField.label}}
+  </mat-checkbox>
+</ng-container>
