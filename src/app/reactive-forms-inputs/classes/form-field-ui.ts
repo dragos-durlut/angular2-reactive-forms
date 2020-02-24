@@ -13,6 +13,7 @@ export class FormFieldUI {
 
   constructor(formField: FormField) {
     this.formField = formField;
+    this.fieldDisplayId = 'field' + this.formField.fieldId.toString();
   }
 
 //#region FormControl functions
