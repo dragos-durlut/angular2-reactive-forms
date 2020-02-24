@@ -7,10 +7,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FieldDatePickerComponent } from './field-date-picker/field-date-picker.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FieldCheckboxComponent } from './field-checkbox/field-checkbox.component';
+import { FieldSwitcherComponent } from './field-switcher/field-switcher.component';
 
 
 @NgModule({
-  declarations: [FieldInputComponent, FieldTextareaComponent, FieldDatePickerComponent, FieldCheckboxComponent],
+  declarations: [FieldInputComponent, FieldTextareaComponent, FieldDatePickerComponent, FieldCheckboxComponent, FieldSwitcherComponent],
   imports: [
     CommonModule,
     MatInputModule,
