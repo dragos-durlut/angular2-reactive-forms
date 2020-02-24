@@ -6,6 +6,7 @@ import { FormSchema } from './shared/interfaces/form-schema';
 import { FormSection } from './shared/interfaces/form-section';
 import { FormField } from './shared/interfaces/form-field';
 import { FormSchemaUiBuilder } from './reactive-forms-sections/builders/form-schema-ui-builder';
+import { FormFieldTypeEnum } from './shared/enums/form-field-type.enum';
 
 @Component({
   selector: 'app-root',
@@ -67,7 +68,7 @@ export class AppComponent {
               label: 'First Name',
               order: 1,
               value: 'Dragos',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true,
               isMandatory: true
             },
@@ -76,7 +77,7 @@ export class AppComponent {
               label: 'Last Name',
               order: 2,
               value: 'Durlut',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true,
               isMandatory: true
             },
@@ -85,7 +86,7 @@ export class AppComponent {
               label: 'School',
               order: 3,
               value: 'Princeton',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true,
               isMandatory: false
             },
@@ -94,7 +95,7 @@ export class AppComponent {
               label: 'Faculty',
               order: 4,
               value: 'Harvard',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true,
               isMandatory: true
             }
@@ -109,7 +110,7 @@ export class AppComponent {
               label: 'Country',
               order: 3,
               value: 'Romania',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true
             },
             <FormField><unknown>{
@@ -117,7 +118,7 @@ export class AppComponent {
               label: 'City',
               order: 4,
               value: 'Bucharest',
-              formFieldType: 'TEXTBOX',
+              formFieldType: FormFieldTypeEnum.Input,
               isEnabled: true
             }
             ]
