@@ -17,6 +17,14 @@ import { FieldCheckboxComponent } from './field-checkbox/field-checkbox.componen
     MatDatepickerModule,
     MatCheckboxModule
   ],
-  exports: [MatInputModule, MatDatepickerModule, MatCheckboxModule]
+  exports: [
+    MatInputModule
+    , MatDatepickerModule
+    , MatCheckboxModule
+    , FieldCheckboxComponent
+    , FieldDatePickerComponent
+    , FieldInputComponent
+    , FieldTextareaComponent
+  ]
 })
 export class ReactiveFormsInputsModule { }
