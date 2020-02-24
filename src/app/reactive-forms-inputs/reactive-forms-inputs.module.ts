@@ -9,6 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FieldCheckboxComponent } from './field-checkbox/field-checkbox.component';
 import { FieldSwitcherComponent } from './field-switcher/field-switcher.component';
 import { FormFieldUI } from './classes/form-field-ui';
+import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FormFieldUI } from './classes/form-field-ui';
     , FieldTextareaComponent
     , FieldSwitcherComponent
     , FormFieldUI
+    , FormFieldUiBuilder
   ]
 })
 export class ReactiveFormsInputsModule { }
