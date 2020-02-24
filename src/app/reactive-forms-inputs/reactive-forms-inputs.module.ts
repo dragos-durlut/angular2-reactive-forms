@@ -10,6 +10,7 @@ import { FieldCheckboxComponent } from './field-checkbox/field-checkbox.componen
 import { FieldSwitcherComponent } from './field-switcher/field-switcher.component';
 import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
+    MatFormFieldModule,
+    MatInputModule,    
     MatDatepickerModule,
     MatCheckboxModule
   ],
@@ -29,6 +31,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   exports: [
       FormsModule
     , ReactiveFormsModule
+    ,MatFormFieldModule
     , MatInputModule
     , MatDatepickerModule
     , MatCheckboxModule
