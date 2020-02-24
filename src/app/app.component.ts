@@ -5,6 +5,7 @@ import { FormFieldUI } from './shared/classes/form-field-ui';
 import { FormSchema } from './shared/interfaces/form-schema';
 import { FormSection } from './shared/interfaces/form-section';
 import { FormField } from './shared/interfaces/form-field';
+import { FormSchemaUiBuilder } from './reactive-forms-sections/builders/form-schema-ui-builder';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,10 @@ export class AppComponent {
   public fieldsToUpdate: any = {};
 
 
-  constructor() {
+  constructor(private formSchemaUiBuilder: FormSchemaUiBuilder) {
     this.loading = true;
-    this.formSchemaUI = new FormSchemaUI(this.getTestFormSchema());
+    let newFormSchema = this.getTestFormSchema();
+    this.setupForm(newFormSchema);
   }
 
   public saveFieldData = () => {
@@ -41,74 +43,82 @@ export class AppComponent {
     //TODO: update some <pre> tag
   }
 
+  private setupForm(formSchema: FormSchema) {
+    
+    this.formSchemaUI = this.formSchemaUiBuilder.fromFormSchemaData(formSchema);
+
+    
+    //TODO: set Validators UI
+  }
+
   getTestFormSchema(): FormSchema {
     let formSchema: FormSchema = <FormSchema>
 
       {
-        Name: "Test Schema",
-        Description: "Tst Schema Desc",
-        Sections: [
+        name: "Test Schema",
+        description: "Tst Schema Desc",
+        sections: [
           <FormSection><unknown>{
-            Title: "Name",
-            Order: 1,
-            SectionId: 1,
-            Fields: [<FormField><unknown>{
-              FieldId: 1,
-              Label: 'First Name',
-              Order: 1,
-              Value: 'Dragos',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true,
-              IsMandatory: true
+            title: "Name",
+            order: 1,
+            sectionId: 1,
+            fields: [<FormField><unknown>{
+              fieldId: 1,
+              label: 'First Name',
+              order: 1,
+              value: 'Dragos',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true,
+              isMandatory: true
             },
             <FormField><unknown>{
-              FieldId: 2,
-              Label: 'Last Name',
-              Order: 2,
-              Value: 'Durlut',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true,
-              IsMandatory: true
+              fieldId: 2,
+              label: 'Last Name',
+              order: 2,
+              value: 'Durlut',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true,
+              isMandatory: true
             },
             <FormField><unknown>{
-              FieldId: 5,
-              Label: 'School',
-              Order: 3,
-              Value: 'Princeton',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true,
-              IsMandatory: false
+              fieldId: 5,
+              label: 'School',
+              order: 3,
+              value: 'Princeton',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true,
+              isMandatory: false
             },
             <FormField><unknown>{
-              FieldId: 6,
-              Label: 'Faculty',
-              Order: 4,
-              Value: 'Harvard',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true,
-              IsMandatory: true
+              fieldId: 6,
+              label: 'Faculty',
+              order: 4,
+              value: 'Harvard',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true,
+              isMandatory: true
             }
             ]
           },
           <FormSection><unknown>{
-            Title: "Address",
-            Order: 2,
-            SectionId: 2,
-            Fields: [<FormField><unknown>{
-              FieldId: 3,
-              Label: 'Country',
-              Order: 3,
-              Value: 'Romania',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true
+            title: "Address",
+            order: 2,
+            sectionId: 2,
+            fields: [<FormField><unknown>{
+              fieldId: 3,
+              label: 'Country',
+              order: 3,
+              value: 'Romania',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true
             },
             <FormField><unknown>{
-              FieldId: 4,
-              Label: 'City',
-              Order: 4,
-              Value: 'Bucharest',
-              ColumnType: 'TEXTBOX',
-              IsEnabled: true
+              fieldId: 4,
+              label: 'City',
+              order: 4,
+              value: 'Bucharest',
+              formFieldType: 'TEXTBOX',
+              isEnabled: true
             }
             ]
           }

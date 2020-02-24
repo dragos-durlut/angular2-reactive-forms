@@ -18,7 +18,7 @@ export class FormSchemaUiBuilder {
   public fromFormSchemaData(formSchema: FormSchema): FormSchemaUI {
     let formSchemaUI = new FormSchemaUI(formSchema);
     formSchemaUI.sectionsUI = new Array<FormSectionUI>();
-    formSchemaUI.formSchema.Sections.forEach(section => {
+    formSchemaUI.formSchema.sections.forEach(section => {
       let formSectionUI = this.formSectionUiBuilder.fromFormSectionData(section);
 
       formSchemaUI.sectionsUI.push(formSectionUI);

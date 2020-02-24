@@ -2,9 +2,9 @@ import { FormSection } from './form-section';
 
 export interface FormSchema {
 
-  Name: string;
+  name: string;
 
-  Description: string;
+  description: string;
 
-  Sections: FormSection[];
+  sections: FormSection[];
 }
