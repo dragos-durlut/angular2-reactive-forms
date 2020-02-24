@@ -6,6 +6,5 @@
          formControlName="{{fieldUI.FieldDisplayId}}"
          [(ngModel)]="fieldUI.Value"
          (blur)="onBlur($event)"
-         (keypress)="$event.keyCode==13 ? onEnter() : true"
-         type="text"/>
+         (keypress)="$event.keyCode==13 ? onEnter() : true" type="text"></textarea>
 </ng-container>

@@ -1,7 +1,11 @@
 import { FormGroup, AbstractControl } from '@angular/forms';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class FormControlHelper {
-  public static getAllControls(mainFormGroup: FormGroup): Map<string, AbstractControl> {
+  public getAllControls(mainFormGroup: FormGroup): Map<string, AbstractControl> {
     let allControls: Map<string, AbstractControl> = new Map<string, AbstractControl>();
 
     Object.keys(mainFormGroup.controls).forEach(sectionKey => {

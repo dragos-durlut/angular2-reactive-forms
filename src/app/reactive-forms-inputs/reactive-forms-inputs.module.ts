@@ -19,6 +19,10 @@ import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
     MatDatepickerModule,
     MatCheckboxModule
   ],
+  providers: [
+     FormFieldUiBuilder
+  ]
+  ,
   exports: [
     MatInputModule
     , MatDatepickerModule
@@ -28,7 +32,7 @@ import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
     , FieldInputComponent
     , FieldTextareaComponent
     , FieldSwitcherComponent    
-    , FormFieldUiBuilder
+  
   ]
 })
 export class ReactiveFormsInputsModule { }

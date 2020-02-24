@@ -20,7 +20,7 @@ export class MainFormComponent implements OnInit {
   submitting: boolean = false;
   formSubmitSubject$: Subject<NgForm>;
 
-  constructor() {
+  constructor(private formControlHelper: FormControlHelper) {
 
     this.formSubmitSubject$ = new Subject();
 
@@ -46,7 +46,7 @@ export class MainFormComponent implements OnInit {
   private async submitForm() {
     if (this.submitting) return;
 
-    let allControls = FormControlHelper.getAllControls(this.formSchemaUI.mainFormGroup);
+    let allControls = this.formControlHelper.getAllControls(this.formSchemaUI.mainFormGroup);
 
     let hasInvalidControls = this.hasInvalidControls(allControls);
     if (hasInvalidControls) {

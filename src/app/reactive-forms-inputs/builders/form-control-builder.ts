@@ -1,9 +1,13 @@
 import { FormControl, ValidatorFn, AsyncValidatorFn, Validators } from '@angular/forms';
 import { FormFieldTypeEnum } from '../../shared/enums/form-field-type.enum';
 import { FormFieldUI } from '../../shared/classes/form-field-ui';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class FormControlBuilder {
-  static buildFormControl(formFieldUI: FormFieldUI): FormControl {
+  public buildFormControl(formFieldUI: FormFieldUI): FormControl {
     
     let fieldValue: any;
     switch (formFieldUI.formField.formFieldType) {

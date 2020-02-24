@@ -4,17 +4,26 @@ import { FormSectionUiBuilder } from './form-section-ui-builder';
 import { MainFormGroupBuilder } from './main-form-group-builder';
 import { FormSchemaUI } from '../../shared/classes/form-schema-ui';
 import { FormSectionUI } from '../../shared/classes/form-section-ui';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class FormSchemaUiBuilder {
-  static fromFormSchemaData(formSchema: FormSchema): FormSchemaUI {
+
+  constructor(public formSectionUiBuilder: FormSectionUiBuilder, public mainFormGroupBuilder: MainFormGroupBuilder) {
+
+  }
+
+  public fromFormSchemaData(formSchema: FormSchema): FormSchemaUI {
     let formSchemaUI = new FormSchemaUI(formSchema);
     formSchemaUI.sectionsUI = new Array<FormSectionUI>();
     formSchemaUI.formSchema.Sections.forEach(section => {
-      let formSectionUI = FormSectionUiBuilder.fromFormSectionData(section);
+      let formSectionUI = this.formSectionUiBuilder.fromFormSectionData(section);
 
       formSchemaUI.sectionsUI.push(formSectionUI);
     });
-    formSchemaUI.mainFormGroup = MainFormGroupBuilder.buildMainFormGroup(formSchemaUI);
+    formSchemaUI.mainFormGroup = this.mainFormGroupBuilder.buildMainFormGroup(formSchemaUI);
 
     formSchemaUI.sectionsUI.forEach(sectionUI => {
       sectionUI.mainFormGroup = formSchemaUI.mainFormGroup;
