@@ -1,1 +1,10 @@
 <p>field-switcher works!</p>
+<ng-container [formGroup]="fieldUI.ParentSectionFormGroup">
+  <ng-container [ngSwitch]="fieldUI.formField.formFieldType">
+    <app-field-checkbox *ngSwitchCase="formFieldTypeEnum.CheckBox" [fieldUI]="fieldUI"> </app-field-checkbox>
+    <app-field-date-picker *ngSwitchCase="formFieldTypeEnum.DateTime" [fieldUI]="fieldUI"> </app-field-date-picker>
+    <app-field-input *ngSwitchCase="formFieldTypeEnum.Input" [fieldUI]="fieldUI"> </app-field-input>
+    <app-field-textarea *ngSwitchCase="formFieldTypeEnum.TextArea" [fieldUI]="fieldUI"> </app-field-textarea>
+    <div *ngSwitchDefault> Element {{fieldUI.formField.label}} could not be resolved for {{fieldUI.formField.formFieldType}} </div>
+  </ng-container>
+</ng-container>
