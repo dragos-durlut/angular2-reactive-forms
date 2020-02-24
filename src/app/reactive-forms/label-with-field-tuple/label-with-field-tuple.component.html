@@ -1,1 +1,12 @@
 <p>label-with-field-tuple works!</p>
+
+
+
+
+<mat-form-field class="example-full-width">
+  <mat-label for="{{fieldUI.formField.fieldDisplayId}}">
+    {{fieldUI.formField.label}}
+    <span title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
+  </mat-label>
+  <app-field-switcher [fieldUI]="fieldUI"></app-field-switcher>
+</mat-form-field>
