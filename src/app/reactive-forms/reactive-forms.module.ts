@@ -12,6 +12,9 @@ import { MainFormComponent } from './main-form/main-form.component';
   imports: [
     CommonModule,
     ReactiveFormsInputsModule
+  ],
+  exports: [
+    MainFormComponent, LabelWithFieldTupleComponent
   ]
 })
 export class ReactiveFormsModule { }
