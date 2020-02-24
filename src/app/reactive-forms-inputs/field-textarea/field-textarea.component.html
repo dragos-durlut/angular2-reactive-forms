@@ -1,10 +1,20 @@
 <p>field-textarea works!</p>
 <ng-container [formGroup]="fieldUI.ParentSectionFormGroup">
-  <textarea matInput
-         name="{{fieldUI.FieldDisplayId}}"
-         id="{{fieldUI.FieldDisplayId}}"
-         formControlName="{{fieldUI.FieldDisplayId}}"
-         [(ngModel)]="fieldUI.Value"
-         (blur)="onBlur($event)"
-         (keypress)="$event.keyCode==13 ? onEnter() : true" type="text"></textarea>
+
+  <mat-form-field>
+    <mat-label>
+      {{fieldUI.formField.label}}
+      <span title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
+    </mat-label>
+    <textarea matInput
+              name="{{fieldUI.FieldDisplayId}}"
+              id="{{fieldUI.FieldDisplayId}}"
+              formControlName="{{fieldUI.FieldDisplayId}}"
+              [(ngModel)]="fieldUI.Value"
+              (blur)="onBlur($event)"
+              (keypress)="$event.keyCode==13 ? onEnter() : true" type="text"></textarea>
+  </mat-form-field>
+
+
+  
 </ng-container>

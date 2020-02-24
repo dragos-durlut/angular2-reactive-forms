@@ -2,11 +2,4 @@
 
 
 
-
-<mat-form-field >
-  <mat-label>
-    {{fieldUI.formField.label}}
-    <span title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
-  </mat-label>
-  <app-field-switcher [fieldUI]="fieldUI"></app-field-switcher>
-</mat-form-field>
+<app-field-switcher [fieldUI]="fieldUI"></app-field-switcher>
