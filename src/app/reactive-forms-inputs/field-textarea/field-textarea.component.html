@@ -1,6 +1,6 @@
-<p>field-input works!</p>
+<p>field-textarea works!</p>
 <ng-container [formGroup]="fieldUI.ParentSectionFormGroup">
-  <input matInput
+  <textarea matInput
          name="{{fieldUI.FieldDisplayId}}"
          id="{{fieldUI.FieldDisplayId}}"
          formControlName="{{fieldUI.FieldDisplayId}}"
@@ -9,5 +9,3 @@
          (keypress)="$event.keyCode==13 ? onEnter() : true"
          type="text"/>
 </ng-container>
-
-
