@@ -6,15 +6,14 @@
       {{fieldUI.formField.label}}
       
     </mat-label>
-    <input matInput
+    <input matInput [required]="(fieldUI.formField.isMandatory && fieldUI.formField.isEnabled) ? true: null"
            name="{{fieldUI.fieldDisplayId}}"
            id="{{fieldUI.fieldDisplayId}}"
            [formControl]="fieldUI.fieldFormControl"           
            (blur)="onBlur($event)"
            (keypress)="$event.keyCode==13 ? onEnter() : true"
            type="text" />
-  </mat-form-field>
-  <span  title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
+  </mat-form-field>  
 </ng-container>
 
 
