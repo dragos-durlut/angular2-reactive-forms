@@ -1,20 +1,20 @@
-<p>field-input works!</p>
+
 <ng-container [formGroup]="fieldUI.parentSectionFormGroup">
   
   <mat-form-field>
     <mat-label>
       {{fieldUI.formField.label}}
-      <span title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
+      
     </mat-label>
     <input matInput
-           name="{{fieldUI.FieldDisplayId}}"
-           id="{{fieldUI.FieldDisplayId}}"
-           formControlName="{{fieldUI.FieldDisplayId}}"
-           [(ngModel)]="fieldUI.Value"
+           name="{{fieldUI.fieldDisplayId}}"
+           id="{{fieldUI.fieldDisplayId}}"
+           [formControl]="fieldUI.fieldFormControl"           
            (blur)="onBlur($event)"
            (keypress)="$event.keyCode==13 ? onEnter() : true"
            type="text" />
   </mat-form-field>
+  <span  title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
 </ng-container>
 
 
