@@ -6,11 +6,11 @@
       <ng-container *ngFor='let fieldUI of sectionUI.fieldsUI; let i=index; let even = even;'>
         <div class="row" *ngIf="even">
           <ng-container>
-            <div class="col-md-6  col-lg-6" app-label-with-field-tuple [fieldUI]="fieldUI">
+            <div class="col-md-6  col-lg-6" app-field-switcher [fieldUI]="fieldUI">
             </div>
           </ng-container>
           <ng-container *ngIf="sectionUI.fieldsUI[i+1]">
-            <div class="col-md-6  col-lg-6" app-label-with-field-tuple [fieldUI]="sectionUI.fieldsUI[i+1]">
+            <div class="col-md-6  col-lg-6" app-field-switcher [fieldUI]="sectionUI.fieldsUI[i+1]">
             </div>
           </ng-container>
         </div>
