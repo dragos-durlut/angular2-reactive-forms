@@ -12,7 +12,6 @@ export class FieldInputComponent extends BaseInputComponent {
     super();
   }
 
-  ngOnInit() {
-  }
+  
 
 }

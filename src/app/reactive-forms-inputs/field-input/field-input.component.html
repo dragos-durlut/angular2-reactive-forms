@@ -11,7 +11,7 @@
            id="{{fieldUI.fieldDisplayId}}"
            [formControl]="fieldUI.fieldFormControl"           
            (blur)="onBlur($event)"
-           (keypress)="$event.keyCode==13 ? onEnter() : true"
+           (keypress)="$event.keyCode==13 ? onEnter($event) : true"
            type="text" />
   </mat-form-field>  
 </ng-container>

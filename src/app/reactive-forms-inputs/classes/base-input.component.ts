@@ -11,20 +11,20 @@ export class BaseInputComponent implements OnInit {
   valueChange: EventEmitter<any> = new EventEmitter<any>();
 
   ngOnInit(): void {
-        
+    this.oldValue = this.fieldUI.formField.value;
   }
 
   onBlur(event: any) {
-    this.setValue();
+    this.setValue(event.target.value);
   }
 
-  onEnter() {
-    this.setValue();
+  onEnter(event: any) {
+    this.setValue(event.target.value);
   }
 
 
-  private setValue(): void {
-    var newValue = this.fieldUI.formField.value;
+  private setValue(newValue:any): void {
+    //var newValue = this.fieldUI.formField.value;
     if (newValue != this.oldValue) {
       this.fieldUI.fieldFormControl.setValue(newValue);
       this.fieldUI.fieldFormControl.updateValueAndValidity();
