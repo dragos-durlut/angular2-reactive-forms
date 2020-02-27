@@ -1,7 +1,7 @@
 <div class="row" [formGroup]="sectionUI.mainFormGroup">
   <div class="col-md-12  col-lg-12" [formGroupName]="sectionUI.sectionDisplayId">
     <fieldset class="section-border">
-      <legend class="section-border">{{sectionUI.title}}</legend>
+      <legend class="section-border">{{sectionUI.formSection.title}}</legend>
       <ng-container *ngFor='let fieldUI of sectionUI.fieldsUI; let i=index; let even = even;'>
         <div class="row" *ngIf="even">
           <ng-container>
