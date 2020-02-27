@@ -1,1 +1,12 @@
-<p>forms-example works!</p>
+<div class="container-fluid" style="height:500px;" *ngIf="!formSchemaUI">
+  No Form Schema present
+</div>
+
+<div class="container-fluid" *ngIf="formSchemaUI">
+  <div class="row">
+    <div class="col-lg-12">
+      <app-main-form submitButtonText="Save" submittingButtonText="Saving..."
+                     [formSchemaUI]="formSchemaUI" [submitFn]="saveFieldData"></app-main-form>
+    </div>
+  </div>
+</div>
