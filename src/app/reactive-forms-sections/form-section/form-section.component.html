@@ -1,10 +1,7 @@
-<div [formGroup]="sectionUI.mainFormGroup">
+<div [formGroup]="sectionUI.mainFormGroup" class="form-section">
   <h3>{{sectionUI.formSection.title}}</h3>
-  <div fxLayout="row" fxLayout.xs="column">
-
-    <ng-container *ngFor='let fieldUI of sectionUI.fieldsUI; let i=index; let even = even;'>
-      <div fxFlex="15"  app-field-switcher [fieldUI]="fieldUI">
-      </div>
-    </ng-container>
+  <div class="field-container">
+    <div app-field-switcher *ngFor='let fieldUI of sectionUI.fieldsUI; let i=index; let even = even;' [fieldUI]="fieldUI" class="field-switcher">
+    </div>
   </div>
 </div>
