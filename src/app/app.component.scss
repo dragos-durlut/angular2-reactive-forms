@@ -1,0 +1,26 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 10% auto ;
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas:
+      "header header header"
+      "left-nav main-content main-content"
+      "footer footer footer";
+      
+}
+
+.header{
+    grid-area: header;
+}
+
+.left-nav {
+  grid-area: left-nav;
+}
+
+.left-nav {
+  grid-area: left-nav;
+}
+
+.footer {
+  grid-area: footer;
+}
