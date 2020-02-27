@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsInputsModule } from '../reactive-forms-inputs/reactive-forms-inputs.module';
 import { FormSectionComponent } from './form-section/form-section.component';
 import { MainFormComponent } from './main-form/main-form.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -10,7 +11,8 @@ import { MainFormComponent } from './main-form/main-form.component';
   declarations: [FormSectionComponent, MainFormComponent],
   imports: [
     CommonModule,
-    ReactiveFormsInputsModule
+    ReactiveFormsInputsModule,
+    MatButtonModule
   ],
   exports: [
     MainFormComponent
