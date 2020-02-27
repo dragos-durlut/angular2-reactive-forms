@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
-You can havea quick look here: https://stackblitz.com/github/dragos-durlut/angular2-reactive-forms
+You can have a quick look here: https://stackblitz.com/github/dragos-durlut/angular2-reactive-forms
 
 ## Development server
 
