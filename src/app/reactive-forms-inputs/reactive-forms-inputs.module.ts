@@ -11,7 +11,7 @@ import { FieldSwitcherComponent } from './field-switcher/field-switcher.componen
 import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FlexLayoutModule, StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMedia, BreakPointRegistry, PrintHook, LayoutStyleBuilder, FlexStyleBuilder, ShowHideStyleBuilder, FlexOrderStyleBuilder, FlexFillStyleBuilder } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [FieldInputComponent, FieldTextareaComponent, FieldDatePickerComponent, FieldCheckboxComponent, FieldSwitcherComponent],
@@ -19,7 +19,7 @@ import { FlexLayoutModule, StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMe
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule ,
+
     MatFormFieldModule,
     MatInputModule,    
     MatDatepickerModule,
@@ -27,14 +27,13 @@ import { FlexLayoutModule, StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMe
   ],
   providers: [
      FormFieldUiBuilder
-  ,
-    StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMedia, BreakPointRegistry, PrintHook, LayoutStyleBuilder, FlexStyleBuilder, ShowHideStyleBuilder, FlexOrderStyleBuilder, FlexFillStyleBuilder
+
   ]
   ,
   exports: [
       FormsModule
     , ReactiveFormsModule
-    , FlexLayoutModule
+
     ,MatFormFieldModule
     , MatInputModule
     , MatDatepickerModule
