@@ -149,8 +149,8 @@ export class FormsExampleComponent {
           },
           <FormSection><unknown>{
             title: "Description",
-            order: 3,
-            sectionId: 3,
+            order: 4,
+            sectionId: 4,
             fields: [<FormField><unknown>{
               fieldId: 7,
               label: 'Self description',
@@ -165,6 +165,28 @@ export class FormsExampleComponent {
               order: 8,
               value: 'Special interests',
               formFieldType: FormFieldTypeEnum.TextArea,
+              isEnabled: true
+            }
+            ]
+          },
+          <FormSection><unknown>{
+            title: "Dates",
+            order: 5,
+            sectionId: 5,
+            fields: [<FormField><unknown>{
+              fieldId: 9,
+              label: 'Date of birth',
+              order: 9,
+              value: new Date(1988,1,1),
+              formFieldType: FormFieldTypeEnum.DateTime,
+              isEnabled: true
+            },
+            <FormField><unknown>{
+              fieldId: 10,
+              label: 'Graduation date',
+              order: 10,
+              value: new Date(2006, 6, 1),
+              formFieldType: FormFieldTypeEnum.DateTime,
               isEnabled: true
             }
             ]
