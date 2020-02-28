@@ -1,9 +1,9 @@
 <ng-container [formGroup]="fieldUI.parentSectionFormGroup">
   <ng-container [ngSwitch]="fieldUI.formField.formFieldType">
-    <div app-field-checkbox *ngSwitchCase="formFieldTypeEnum.CheckBox" [fieldUI]="fieldUI"> </div>
-    <div app-field-date-picker *ngSwitchCase="formFieldTypeEnum.DateTime" [fieldUI]="fieldUI"> </div>
-    <div app-field-input *ngSwitchCase="formFieldTypeEnum.Input" [fieldUI]="fieldUI"> </div>
-    <div app-field-textarea *ngSwitchCase="formFieldTypeEnum.TextArea" [fieldUI]="fieldUI"> </div>
-    <div *ngSwitchDefault> Element {{fieldUI.formField.label}} could not be resolved for {{fieldUI.formField.formFieldType}} </div>
+    <div class="input-container" app-field-checkbox *ngSwitchCase="formFieldTypeEnum.CheckBox" [fieldUI]="fieldUI"> </div>
+    <div class="input-container" app-field-date-picker *ngSwitchCase="formFieldTypeEnum.DateTime" [fieldUI]="fieldUI"> </div>
+    <div class="input-container" app-field-input *ngSwitchCase="formFieldTypeEnum.Input" [fieldUI]="fieldUI"> </div>
+    <div class="input-container" app-field-textarea *ngSwitchCase="formFieldTypeEnum.TextArea" [fieldUI]="fieldUI"> </div>
+    <div class="input-container" *ngSwitchDefault> Element {{fieldUI.formField.label}} could not be resolved for {{fieldUI.formField.formFieldType}} </div>
   </ng-container>
 </ng-container>

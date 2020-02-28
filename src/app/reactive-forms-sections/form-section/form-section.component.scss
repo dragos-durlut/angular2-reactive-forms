@@ -1,9 +1,10 @@
-.field-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.field-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .field-switcher {
+    flex: 1 1 auto;
+  }
 }
 
-.field-switcher{
-    flex: 1 1 auto;
-}
