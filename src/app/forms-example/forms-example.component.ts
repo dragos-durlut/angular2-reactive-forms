@@ -146,6 +146,28 @@ export class FormsExampleComponent {
               isEnabled: true
             }
             ]
+          },
+          <FormSection><unknown>{
+            title: "Description",
+            order: 3,
+            sectionId: 3,
+            fields: [<FormField><unknown>{
+              fieldId: 7,
+              label: 'Self description',
+              order: 7,
+              value: 'Something interesting',
+              formFieldType: FormFieldTypeEnum.TextArea,
+              isEnabled: true
+            },
+            <FormField><unknown>{
+              fieldId: 8,
+              label: 'Notes about self',
+              order: 8,
+              value: 'Special interests',
+              formFieldType: FormFieldTypeEnum.TextArea,
+              isEnabled: true
+            }
+            ]
           }
         ]
       };
