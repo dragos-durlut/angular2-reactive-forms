@@ -1,19 +1,15 @@
-<p>field-date-picker works!</p>
-
 <ng-container [formGroup]="fieldUI.parentSectionFormGroup">
 
   <mat-form-field>
     <mat-label>
-      {{fieldUI.formField.label}}
-      <span title="Mandatory field" *ngIf="fieldUI.formField.isMandatory && fieldUI.formField.isEnabled"><b>*</b></span>
+      {{fieldUI.formField.label}}     
     </mat-label>
-    <input matInput
+    <input matInput [required]="(fieldUI.formField.isMandatory && fieldUI.formField.isEnabled) ? true: null"
            [matDatepicker]="fieldUI.FieldDisplayId"
            name="{{fieldUI.FieldDisplayId}}"
            id="{{fieldUI.FieldDisplayId}}"
-           formControlName="{{fieldUI.FieldDisplayId}}"
-           [(ngModel)]="fieldUI.Value"
-           (blur)="onBlur($event)"
+           [formControl]="fieldUI.fieldFormControl"           
+           (blur)="onBlur($event.target.value)"
            (keypress)="$event.keyCode==13 ? onEnter() : true" />
     <mat-datepicker-toggle matSuffix [for]="fieldUI.FieldDisplayId"></mat-datepicker-toggle>
     <mat-datepicker [attr.id]="fieldUI.FieldDisplayId"></mat-datepicker>
