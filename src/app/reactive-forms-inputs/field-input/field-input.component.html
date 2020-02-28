@@ -10,7 +10,7 @@
            name="{{fieldUI.fieldDisplayId}}"
            id="{{fieldUI.fieldDisplayId}}"
            [formControl]="fieldUI.fieldFormControl"           
-           (blur)="onBlur($event)"
+           (blur)="onBlur($event.target.value)"
            (keypress)="$event.keyCode==13 ? onEnter($event) : true"
            type="text" />
   </mat-form-field>  

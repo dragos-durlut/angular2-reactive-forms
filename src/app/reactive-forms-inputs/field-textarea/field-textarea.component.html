@@ -1,4 +1,4 @@
-<p>field-textarea works!</p>
+
 <ng-container [formGroup]="fieldUI.parentSectionFormGroup">
 
   <mat-form-field>
@@ -9,9 +9,8 @@
     <textarea matInput
               name="{{fieldUI.FieldDisplayId}}"
               id="{{fieldUI.FieldDisplayId}}"
-              formControlName="{{fieldUI.FieldDisplayId}}"
-              [(ngModel)]="fieldUI.Value"
-              (blur)="onBlur($event)"
+              [formControl]="fieldUI.fieldFormControl"                 
+              (blur)="onBlur($event.target.value)"
               (keypress)="$event.keyCode==13 ? onEnter() : true" type="text"></textarea>
   </mat-form-field>
 

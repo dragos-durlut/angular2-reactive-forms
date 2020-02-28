@@ -14,12 +14,12 @@ export class BaseInputComponent implements OnInit {
     this.oldValue = this.fieldUI.formField.value;
   }
 
-  onBlur(event: any) {
-    this.setValue(event.target.value);
+  onBlur(newValue: any) {
+    this.setValue(newValue);
   }
 
-  onEnter(event: any) {
-    this.setValue(event.target.value);
+  onEnter(newValue: any) {
+    this.setValue(newValue);
   }
 
 
