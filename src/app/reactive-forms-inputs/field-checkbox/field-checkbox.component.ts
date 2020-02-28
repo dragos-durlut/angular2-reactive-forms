@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BaseInputComponent } from '../classes/base-input.component';
 
 @Component({
-  selector: 'app-field-checkbox',
+  selector: '[app-field-checkbox]',
   templateUrl: './field-checkbox.component.html',
   styleUrls: ['./field-checkbox.component.scss']
 })
