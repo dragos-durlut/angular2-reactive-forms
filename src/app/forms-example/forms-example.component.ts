@@ -42,6 +42,7 @@ export class FormsExampleComponent {
     });
 
     console.info("Fields were updated!");
+    console.info(this.fieldsToUpdate);
     //TODO: update some <pre> tag
   }
 
