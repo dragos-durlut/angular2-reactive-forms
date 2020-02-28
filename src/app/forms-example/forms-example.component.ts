@@ -28,12 +28,13 @@ export class FormsExampleComponent {
     this.loading = true;
     let newFormSchema = this.getTestFormSchema();
     this.setupForm(newFormSchema);
+
   }
 
   public saveFieldData = () => {
 
-    this.formSchemaUI.sectionsUI.forEach(function (sectionUI: FormSectionUI) {
-      sectionUI.fieldsUI.forEach(function (fieldUI: FormFieldUI) {
+    this.formSchemaUI.sectionsUI.forEach( (sectionUI: FormSectionUI) => {
+      sectionUI.fieldsUI.forEach( (fieldUI: FormFieldUI) => {
         if (fieldUI.fieldFormControl.dirty) {
           this.fieldsToUpdate[fieldUI.formField.fieldId] = fieldUI.formField.value;
         }
@@ -119,6 +120,28 @@ export class FormsExampleComponent {
               order: 4,
               value: 'Bucharest',
               formFieldType: FormFieldTypeEnum.Input,
+              isEnabled: true
+            }
+            ]
+          },
+          <FormSection><unknown>{
+            title: "Civil State",
+            order: 3,
+            sectionId: 3,
+            fields: [<FormField><unknown>{
+              fieldId: 5,
+              label: 'Married',
+              order: 5,
+              value: false,
+              formFieldType: FormFieldTypeEnum.CheckBox,
+              isEnabled: true
+            },
+            <FormField><unknown>{
+              fieldId: 6,
+              label: 'Military',
+              order: 6,
+              value: null,
+              formFieldType: FormFieldTypeEnum.CheckBox,
               isEnabled: true
             }
             ]
