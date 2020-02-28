@@ -5,14 +5,14 @@
       {{fieldUI.formField.label}}     
     </mat-label>
     <input matInput [required]="(fieldUI.formField.isMandatory && fieldUI.formField.isEnabled) ? true: null"
-           [matDatepicker]="fieldUI.FieldDisplayId"
+           [matDatepicker]="picker"
            name="{{fieldUI.FieldDisplayId}}"
            id="{{fieldUI.FieldDisplayId}}"
-           [formControl]="fieldUI.fieldFormControl"           
-           (blur)="onBlur($event.target.value)"
+           [formControl]="fieldUI.fieldFormControl"                                 
+           (dateChange)="onValueChange($event.value)"
            (keypress)="$event.keyCode==13 ? onEnter() : true" />
-    <mat-datepicker-toggle matSuffix [for]="fieldUI.FieldDisplayId"></mat-datepicker-toggle>
-    <mat-datepicker [attr.id]="fieldUI.FieldDisplayId"></mat-datepicker>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
   
