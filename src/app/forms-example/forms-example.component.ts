@@ -141,7 +141,7 @@ export class FormsExampleComponent {
               fieldId: 6,
               label: 'Military',
               order: 6,
-              value: null,
+              value: true,
               formFieldType: FormFieldTypeEnum.CheckBox,
               isEnabled: true
             }
