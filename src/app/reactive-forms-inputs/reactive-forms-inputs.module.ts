@@ -11,6 +11,7 @@ import { FieldSwitcherComponent } from './field-switcher/field-switcher.componen
 import { FormFieldUiBuilder } from './builders/form-field-ui-builder';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule,
     MatInputModule,    
     MatDatepickerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatNativeDateModule
   ],
   providers: [
      FormFieldUiBuilder
@@ -38,6 +40,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     , MatInputModule
     , MatDatepickerModule
     , MatCheckboxModule
+    , MatNativeDateModule
+
     , FieldCheckboxComponent
     , FieldDatePickerComponent
     , FieldInputComponent
